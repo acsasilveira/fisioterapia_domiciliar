@@ -1,0 +1,491 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Produto | Gabriela Ribeiro | Plataforma de Vendas</title>
+  <meta name="description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro. Preencha informações como nome, valor, vendedor e descrição para adicionar produtos ao seu inventário.">
+  <meta name="keywords" content="cadastrar produto, adicionar produto, Gabriela Ribeiro, plataforma vendas, inventário">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cadastrar Produto | Gabriela Ribeiro">
+  <meta property="og:description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro com formulário completo e intuitivo.">
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f9f6f1;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    
+    /* Layout components */
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      background-color: #395346;
+      padding: 12px 16px;
+      box-shadow: 0px 4px 6px #00000019;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+    
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+    
+    .back-button {
+      background-color: #bfd7c4;
+      color: #395346;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      line-height: 17px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .back-button:hover {
+      background-color: #a8c7ae;
+      transform: translateY(-1px);
+    }
+    
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 90%;
+      max-width: 568px;
+      margin: 0 auto;
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .form-title {
+      font-size: 28px;
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #395346;
+      margin-bottom: 8px;
+    }
+    
+    .form-subtitle {
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #737373;
+    }
+    
+    .form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      margin-top: 14px;
+    }
+    
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    
+    .field-label {
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+      color: #395346;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 14px 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 17px;
+      color: #828282;
+      background-color: #ffffff;
+      border: 1px solid #c7c7c7;
+      border-radius: 6px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: #395346;
+      box-shadow: 0 0 0 2px rgba(57, 83, 70, 0.1);
+    }
+    
+    .form-textarea {
+      width: 100%;
+      padding: 10px 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 17px;
+      color: #828282;
+      background-color: #ffffff;
+      border: 1px solid #c7c7c7;
+      border-radius: 6px;
+      min-height: 120px;
+      resize: vertical;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .form-textarea:focus {
+      outline: none;
+      border-color: #395346;
+      box-shadow: 0 0 0 2px rgba(57, 83, 70, 0.1);
+    }
+    
+    .image-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 100%;
+    }
+    
+    .image-help-text {
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 20px;
+      color: #737373;
+      margin-top: 8px;
+    }
+    
+    .image-help-text em {
+      font-style: italic;
+    }
+    
+    .form-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      margin-top: 24px;
+      align-items: center;
+    }
+    
+    .primary-button {
+      background-color: #395346;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+      cursor: pointer;
+      box-shadow: 0px 4px 4px #0000003f;
+      transition: all 0.3s ease;
+      order: 2;
+    }
+    
+    .primary-button:hover {
+      background-color: #2d4238;
+      transform: translateY(-2px);
+      box-shadow: 0px 6px 8px #0000004f;
+    }
+    
+    .primary-button:active {
+      transform: translateY(0);
+      box-shadow: 0px 2px 4px #0000003f;
+    }
+    
+    .secondary-button {
+      background-color: #ffffff;
+      color: #395346;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 34px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      line-height: 22px;
+      cursor: pointer;
+      box-shadow: 0px 4px 4px #00000023;
+      transition: all 0.3s ease;
+      order: 1;
+    }
+    
+    .secondary-button:hover {
+      background-color: #f5f5f5;
+      transform: translateY(-1px);
+    }
+    
+    .secondary-button:active {
+      transform: translateY(0);
+    }
+    
+    /* Typography */
+    .required::after {
+      content: " *";
+      color: #e53e3e;
+    }
+    
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+      .header {
+        padding: 12px 32px;
+      }
+      
+      .logo {
+        width: 100px;
+      }
+      
+      .back-button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+      
+      .form-container {
+        width: 80%;
+      }
+      
+      .form-title {
+        font-size: 36px;
+      }
+      
+      .form-subtitle {
+        font-size: 18px;
+      }
+      
+      .field-label {
+        font-size: 18px;
+      }
+      
+      .form-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+      }
+      
+      .primary-button {
+        font-size: 18px;
+        order: 2;
+      }
+      
+      .secondary-button {
+        font-size: 18px;
+        order: 1;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .header {
+        padding: 12px 40px;
+      }
+      
+      .header-content {
+        width: 54%;
+        margin: 0 auto;
+      }
+      
+      .logo {
+        width: 110px;
+      }
+      
+      .form-container {
+        width: 40%;
+        max-width: 568px;
+      }
+      
+      .form-title {
+        font-size: 45px;
+        line-height: 51px;
+      }
+      
+      .form-subtitle {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .form-actions {
+        justify-content: flex-end;
+        gap: 20px;
+      }
+      
+      .secondary-button {
+        margin-right: 20px;
+      }
+    }
+  </style>
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhealthcare2726back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <div class="header-content">
+        <img src="../assets/images/img_header_logo.svg" alt="Gabriela Ribeiro Logo" class="logo">
+        <button type="button" class="back-button" onclick="history.back()">← Voltar</button>
+      </div>
+    </header>
+    
+    <section class="form-container">
+      <div class="form-header">
+        <h1 class="form-title">Cadastrar Produto</h1>
+        <p class="form-subtitle">Preencha os dados do produto abaixo</p>
+      </div>
+      
+      <form class="form-fields" id="productForm">
+        <div class="field-group">
+          <label for="productName" class="field-label required">Nome do Produto</label>
+          <input 
+            type="text" 
+            id="productName" 
+            name="productName" 
+            class="form-input" 
+            placeholder="Ex.: Andador com Rodas"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="productValue" class="field-label required">Valor Atual do Produto</label>
+          <input 
+            type="text" 
+            id="productValue" 
+            name="productValue" 
+            class="form-input" 
+            placeholder="Ex.: R$ 100,00"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="soldBy" class="field-label required">Vendido por</label>
+          <input 
+            type="text" 
+            id="soldBy" 
+            name="soldBy" 
+            class="form-input" 
+            placeholder="Ex.: Mercado Livre"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="description" class="field-label">Descrição Breve</label>
+          <textarea 
+            id="description" 
+            name="description" 
+            class="form-textarea" 
+            placeholder="Descreva aqui o produto..."
+          ></textarea>
+        </div>
+        
+        <div class="image-field-group">
+          <label for="imageUrl" class="field-label">URL da Imagem</label>
+          <input 
+            type="url" 
+            id="imageUrl" 
+            name="imageUrl" 
+            class="form-input" 
+            placeholder="Ex.: https://exemplo.com/imagem.jpg"
+          >
+          <p class="image-help-text">
+            Cole o link de uma imagem do produto <em>(Copiar endereço da imagem)</em>
+          </p>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="secondary-button" onclick="cancelForm()">Cancelar</button>
+          <button type="submit" class="primary-button">+ Adicionar Produto</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+  <script>
+    // Form validation and submission
+    document.getElementById('productForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const productData = {
+        name: formData.get('productName'),
+        value: formData.get('productValue'),
+        soldBy: formData.get('soldBy'),
+        description: formData.get('description'),
+        imageUrl: formData.get('imageUrl')
+      };
+      
+      // Basic validation
+      if (!productData.name || !productData.value || !productData.soldBy) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+      }
+      
+      // Simulate form submission
+      console.log('Produto cadastrado:', productData);
+      alert('Produto cadastrado com sucesso!');
+      
+      // Reset form
+      this.reset();
+    });
+    
+    function cancelForm() {
+      if (confirm('Tem certeza que deseja cancelar? Todos os dados serão perdidos.')) {
+        document.getElementById('productForm').reset();
+        history.back();
+      }
+    }
+    
+    // Format currency input
+    document.getElementById('productValue').addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value) {
+        value = (parseInt(value) / 100).toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        });
+        e.target.value = value;
+      }
+    });
+  </script>
+</body>
+</html>
