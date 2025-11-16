@@ -1,0 +1,150 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Produto | Gabriela Ribeiro | Plataforma de Vendas</title>
+  <meta name="description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro. Preencha informações como nome, valor, vendedor e descrição para adicionar produtos ao seu inventário.">
+  <meta name="keywords" content="cadastrar produto, adicionar produto, Gabriela Ribeiro, plataforma vendas, inventário">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cadastrar Produto | Gabriela Ribeiro">
+  <meta property="og:description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro com formulário completo e intuitivo.">
+  
+  <link rel="stylesheet" href="../style/style-cadastro.css">  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhealthcare2726back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <div class="header-content">
+        <img src="../assets/images/img_header_logo.svg" alt="Gabriela Ribeiro Logo" class="logo">
+        <button type="button" class="back-button" onclick="history.back()">← Voltar</button>
+      </div>
+    </header>
+    
+    <section class="form-container">
+      <div class="form-header">
+        <h1 class="form-title">Cadastrar Produto</h1>
+        <p class="form-subtitle">Preencha os dados do produto abaixo</p>
+      </div>
+      
+      <form class="form-fields" id="productForm">
+        <div class="field-group">
+          <label for="productName" class="field-label required">Nome do Produto</label>
+          <input 
+            type="text" 
+            id="productName" 
+            name="productName" 
+            class="form-input" 
+            placeholder="Ex.: Andador com Rodas"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="productValue" class="field-label required">Valor Atual do Produto</label>
+          <input 
+            type="text" 
+            id="productValue" 
+            name="productValue" 
+            class="form-input" 
+            placeholder="Ex.: R$ 100,00"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="soldBy" class="field-label required">Vendido por</label>
+          <input 
+            type="text" 
+            id="soldBy" 
+            name="soldBy" 
+            class="form-input" 
+            placeholder="Ex.: Mercado Livre"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="description" class="field-label">Descrição Breve</label>
+          <textarea 
+            id="description" 
+            name="description" 
+            class="form-textarea" 
+            placeholder="Descreva aqui o produto..."
+          ></textarea>
+        </div>
+        
+        <div class="image-field-group">
+          <label for="imageUrl" class="field-label">URL da Imagem</label>
+          <input 
+            type="url" 
+            id="imageUrl" 
+            name="imageUrl" 
+            class="form-input" 
+            placeholder="Ex.: https://exemplo.com/imagem.jpg"
+          >
+          <p class="image-help-text">
+            Cole o link de uma imagem do produto <em>(Copiar endereço da imagem)</em>
+          </p>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="secondary-button" onclick="cancelForm()">Cancelar</button>
+          <button type="submit" class="primary-button">+ Adicionar Produto</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+  <script>
+    // Form validation and submission
+    document.getElementById('productForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const productData = {
+        name: formData.get('productName'),
+        value: formData.get('productValue'),
+        soldBy: formData.get('soldBy'),
+        description: formData.get('description'),
+        imageUrl: formData.get('imageUrl')
+      };
+      
+      // Basic validation
+      if (!productData.name || !productData.value || !productData.soldBy) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+      }
+      
+      // Simulate form submission
+      console.log('Produto cadastrado:', productData);
+      alert('Produto cadastrado com sucesso!');
+      
+      // Reset form
+      this.reset();
+    });
+    
+    function cancelForm() {
+      if (confirm('Tem certeza que deseja cancelar? Todos os dados serão perdidos.')) {
+        document.getElementById('productForm').reset();
+        history.back();
+      }
+    }
+    
+    // Format currency input
+    document.getElementById('productValue').addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value) {
+        value = (parseInt(value) / 100).toLocaleString('pt-BR', {
+          style: 'currency',
+          currency: 'BRL'
+        });
+        e.target.value = value;
+      }
+    });
+  </script>
+</body>
+</html>

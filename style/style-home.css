@@ -1,3 +1,13 @@
+/* Importação das fontes */
+@font-face {
+    /* Na hora de configurar os escritos - font-family: 'Crimson Pro', sans-serif; */
+    font-family: 'Crimson Pro';
+    src: url('../fonts/crimson_pro/CrimsonPro-VariableFont_wght.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -6,7 +16,7 @@
 }
 
 body {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Crimson Pro", serif;
   background-color: #f9f6f1;
   color: #395346;
   line-height: 1.6;
