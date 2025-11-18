@@ -12,8 +12,8 @@
   <meta property="og:description" content="Sistema de administração para gerenciamento de produtos da Gabriela Ribeiro">
   
   <link rel="stylesheet" href="../style/style-adm.css">
-  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhealthcare2076back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
-  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
   </head>
 <body>
   <main class="main-container">
@@ -32,20 +32,18 @@
           <form class="form-container">
             <div class="input-group">
               <label for="username" class="input-label">Usuário</label>
-              <input type="text" id="username" class="input-field" placeholder="Digite seu usuário" required>
+              <input type="email" id="email" class="input-field" placeholder="Digite seu email" required>
             </div>
             
             <div class="input-group">
               <label for="password" class="input-label">Senha</label>
               <input type="password" id="password" class="input-field" placeholder="Digite sua senha" required>
             </div>
+            <div id="error-message" style="color: red; text-align: center; margin-bottom: 10px;"></div>
             
             <div class="button-section">
-              <a href="./GabrielaRibeiroProductManagementDashboard.html">
-                <!--<button type="submit" class="login-button">Entrar</button>-->
-                <button class="login-button">Entrar</button>
-              </a>
-              <a href="./DraGabrielaRibeiroFisioterapiaDomiciliar.html" class="back-link">Voltar para página inicial</a>
+                <button type="button" id="login-button" class="login-button">Entrar</button>
+              <a href="./home.html" class="back-link">Voltar para página inicial</a>
             </div>
             
             <div class="support-section">
@@ -57,5 +55,7 @@
       </div>
     </section>
   </main>
+  <script type="module" src="../firebase-config.js"></script>
+  <script type="module" src="../auth.js"></script>
 </body>
 </html>

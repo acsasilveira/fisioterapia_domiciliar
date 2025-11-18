@@ -12,8 +12,8 @@
   <meta property="og:description" content="Dashboard de gestão de produtos Gabriela Ribeiro. Gerencie equipamentos de acessibilidade vendidos em múltiplas plataformas.">
   
   <link rel="stylesheet" href="../style/style-dash-produtos.css">
-  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhealthcare2076back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
-  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
 
 <body>
@@ -24,7 +24,7 @@
 
     <section class="content-wrapper">
       <div class="header-section">
-        <h1 class="page-title">Produtos Cadastrados (7)</h1>
+        <h1 class="page-title">Produtos Cadastrados <span id="product-count">(0)</span></h1>
         <a href="./cadastro.html">
           <button class="add-button" type="button">+ Adicionar Produto</button>
         </a>
@@ -37,91 +37,14 @@
           <div class="header-cell" role="columnheader">Vendido Por</div>
         </div>
 
-        <div class="table-body" role="rowgroup">
-          <div class="table-row" role="row">
-            <div class="table-cell" role="cell" data-label="Produto:">Andador com Rodas e Assento</div>
-            <div class="table-cell" role="cell" data-label="Valor:">R$ 280,00</div>
-            <div class="table-cell" role="cell" data-label="Vendido Por:">
-              <span>Shopee</span>
-              <img src="../assets/images/img_cones.svg" alt="Ações do produto" class="action-icons">
-            </div>
-          </div>
-
-          <div class="table-row" role="row">
-            <div class="table-cell" role="cell" data-label="Produto:">Barra de Apoio para Banheiro</div>
-            <div class="table-cell" role="cell" data-label="Valor:">R$ 80,00</div>
-            <div class="table-cell" role="cell" data-label="Vendido Por:">
-              <span>Mercado Livre</span>
-              <img src="../assets/images/img_cones.svg" alt="Ações do produto" class="action-icons">
-            </div>
-          </div>
-
-          <div class="table-row" role="row">
-            <div class="table-cell" role="cell" data-label="Produto:">Almofada Ortopédica</div>
-            <div class="table-cell" role="cell" data-label="Valor:">R$ 120,00</div>
-            <div class="table-cell" role="cell" data-label="Vendido Por:">
-              <span>Amazon</span>
-              <img src="../assets/images/img_cones.svg" alt="Ações do produto" class="action-icons">
-            </div>
-          </div>
-
-          <div class="table-row" role="row">
-            <div class="table-cell" role="cell" data-label="Produto:">Tapete Antiderrapante</div>
-            <div class="table-cell" role="cell" data-label="Valor:">R$ 80,00</div>
-            <div class="table-cell" role="cell" data-label="Vendido Por:">
-              <span>Shopee</span>
-              <img src="../assets/images/img_cones.svg" alt="Ações do produto" class="action-icons">
-            </div>
-          </div>
-
-          <div class="table-row" role="row">
-            <div class="table-cell" role="cell" data-label="Produto:">Elevador de Vaso</div>
-            <div class="table-cell" role="cell" data-label="Valor:">R$ 150,00</div>
-            <div class="table-cell" role="cell" data-label="Vendido Por:">
-              <span>Mercado Livre</span>
-              <img src="../assets/images/img_cones.svg" alt="Ações do produto" class="action-icons">
-            </div>
-          </div>
-
-          <div class="table-row" role="row">
-            <div class="table-cell" role="cell" data-label="Produto:">Kit Auxiliar</div>
-            <div class="table-cell" role="cell" data-label="Valor:">R$ 180,00</div>
-            <div class="table-cell" role="cell" data-label="Vendido Por:">
-              <span>Mercado Livre</span>
-              <img src="../assets/images/img_cones.svg" alt="Ações do produto" class="action-icons">
-            </div>
-          </div>
+        <div class="table-body" id="product-list" role="rowgroup">
+          <!-- Product rows will be inserted here dynamically -->
         </div>
       </div>
     </section>
   </main>
 
-  <script>
-    // Add product button functionality
-    document.querySelector('.add-button').addEventListener('click', function() {
-      alert('Funcionalidade de adicionar produto será implementada');
-    });
-
-    // Action icons functionality
-    document.querySelectorAll('.action-icons').forEach(function(icon) {
-      icon.addEventListener('click', function() {
-        alert('Ações do produto (editar/excluir) serão implementadas');
-      });
-    });
-
-    // Keyboard navigation for table rows
-    document.querySelectorAll('.table-row').forEach(function(row, index) {
-      row.setAttribute('tabindex', '0');
-      row.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          const actionIcon = row.querySelector('.action-icons');
-          if (actionIcon) {
-            actionIcon.click();
-          }
-        }
-      });
-    });
-  </script>
+  <script type="module" src="../firebase-config.js"></script>
+  <script type="module" src="../product-display.js"></script>
 </body>
 </html>

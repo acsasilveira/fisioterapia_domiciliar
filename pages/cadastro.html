@@ -12,8 +12,8 @@
   <meta property="og:description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro com formulário completo e intuitivo.">
   
   <link rel="stylesheet" href="../style/style-cadastro.css">  
-  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fhealthcare2726back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
-  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
 <body>
   <main class="main-container">
@@ -98,35 +98,10 @@
       </form>
     </section>
   </main>
+  <script type="module" src="../firebase-config.js"></script>
+  <script type="module" src="../product-registration.js"></script>
   
   <script>
-    // Form validation and submission
-    document.getElementById('productForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(this);
-      const productData = {
-        name: formData.get('productName'),
-        value: formData.get('productValue'),
-        soldBy: formData.get('soldBy'),
-        description: formData.get('description'),
-        imageUrl: formData.get('imageUrl')
-      };
-      
-      // Basic validation
-      if (!productData.name || !productData.value || !productData.soldBy) {
-        alert('Por favor, preencha todos os campos obrigatórios.');
-        return;
-      }
-      
-      // Simulate form submission
-      console.log('Produto cadastrado:', productData);
-      alert('Produto cadastrado com sucesso!');
-      
-      // Reset form
-      this.reset();
-    });
-    
     function cancelForm() {
       if (confirm('Tem certeza que deseja cancelar? Todos os dados serão perdidos.')) {
         document.getElementById('productForm').reset();
