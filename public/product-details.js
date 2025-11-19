@@ -6,52 +6,68 @@ document.addEventListener('DOMContentLoaded', function () {
    const productCount = document.getElementById('product-count');
 
    async function fetchProducts() {
-       const querySnapshot = await getDocs(collection(db, 'products'));
-       let count = 0;
-       productList.innerHTML = '';
-       querySnapshot.forEach((doc) => {
-           const product = doc.data();
-           const row = document.createElement('div');
-           row.classList.add('table-row');
-           row.setAttribute('role', 'row');
-           row.setAttribute('data-id', doc.id);
+       try {
+           const querySnapshot = await getDocs(collection(db, 'products'));
+           let count = 0;
+           productList.innerHTML = ''; 
 
-           row.innerHTML = `
-               <div class="table-cell" role="cell" data-label="Produto:">${product.name}</div>
-               <div class="table-cell" role="cell" data-label="Valor:">${product.value}</div>
-               <div class="table-cell" role="cell" data-label="Ações:">
-                   <div class="action-buttons">
-                       <button class="edit-button">Editar</button>
-                       <button class="delete-button">Excluir</button>
+           if (querySnapshot.empty) {
+               productCount.textContent = '(0)';
+               return;
+           }
+
+           querySnapshot.forEach((doc) => {
+               const product = doc.data();
+               const row = document.createElement('div');
+               row.classList.add('table-row');
+               row.setAttribute('role', 'row');
+               row.setAttribute('data-id', doc.id);
+
+               row.innerHTML = `
+                   <div class="table-cell" role="cell" data-label="Produto:">${product.name}</div>
+                   <div class="table-cell" role="cell" data-label="Valor:">${product.value}</div>
+                   <div class="table-cell" role="cell" data-label="Ações:">
+                       <div class="action-buttons">
+                           <button class="edit-button">Editar</button>
+                           <button class="delete-button">Excluir</button>
+                       </div>
                    </div>
-               </div>
-           `;
-           productList.appendChild(row);
-           count++;
-       });
-       productCount.textContent = `(${count})`;
+               `;
+               productList.appendChild(row);
+               count++;
+           });
+           productCount.textContent = `(${count})`;
+       } catch (error) {
+           console.error("Erro ao buscar produtos: ", error);
+           productList.innerHTML = '<p>Erro ao carregar produtos.</p>';
+       }
    }
 
    fetchProducts();
 
    productList.addEventListener('click', function (e) {
-       if (e.target.classList.contains('delete-button')) {
-           const productId = e.target.closest('.table-row').getAttribute('data-id');
+       const target = e.target;
+       const row = target.closest('.table-row');
+       if (!row) return;
+
+       const productId = row.getAttribute('data-id');
+
+       if (target.classList.contains('delete-button')) {
            if (confirm('Tem certeza que deseja excluir este produto?')) {
                deleteDoc(doc(db, 'products', productId))
                    .then(() => {
                        console.log('Document successfully deleted!');
-                       fetchProducts();
+                       fetchProducts(); // Recarrega a lista
                    })
                    .catch((error) => {
                        console.error('Error removing document: ', error);
+                       alert('Ocorreu um erro ao excluir o produto.');
                    });
            }
        }
 
-       if (e.target.classList.contains('edit-button')) {
-           const productId = e.target.closest('.table-row').getAttribute('data-id');
-           window.location.href = `./pages/cadastro.html?id=${productId}`;
+       if (target.classList.contains('edit-button')) {
+           window.location.href = `cadastro.html?id=${productId}`;
        }
    });
 });
