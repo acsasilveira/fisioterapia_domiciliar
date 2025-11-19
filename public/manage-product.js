@@ -1,7 +1,7 @@
-import { getFirestore, collection, addDoc, getDoc, doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
+import { collection, addDoc, getDoc, doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
+import { db } from '../firebase-config.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-   const db = getFirestore();
    const productForm = document.getElementById('productForm');
    const urlParams = new URLSearchParams(window.location.search);
    const productId = urlParams.get('id');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
                const product = docSnap.data();
                document.getElementById('productName').value = product.name;
                document.getElementById('productValue').value = product.value;
-               document.getElementById('soldBy').value = product.soldBy;
+               document.getElementById('productLink').value = product.productLink;
                document.getElementById('description').value = product.description;
                document.getElementById('imageUrl').value = product.imageUrl;
                document.querySelector('.primary-button').textContent = 'Atualizar Produto';
@@ -33,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
        const productData = {
            name: formData.get('productName'),
            value: formData.get('productValue'),
-           soldBy: formData.get('soldBy'),
+           productLink: formData.get('productLink'),
            description: formData.get('description'),
            imageUrl: formData.get('imageUrl')
        };
 
-       if (!productData.name || !productData.value || !productData.soldBy) {
+       if (!productData.name || !productData.value || !productData.productLink) {
            alert('Por favor, preencha todos os campos obrigatórios.');
            return;
        }

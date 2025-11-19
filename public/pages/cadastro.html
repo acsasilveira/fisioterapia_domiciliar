@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastrar Produto | Gabriela Ribeiro | Plataforma de Vendas</title>
-  <meta name="description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro. Preencha informações como nome, valor, vendedor e descrição para adicionar produtos ao seu inventário.">
+  <meta name="description" content="Cadastre novos produtos na plataforma Gabriela Ribeiro. Preencha informações como nome, valor, e link para adicionar produtos ao seu inventário.">
   <meta name="keywords" content="cadastrar produto, adicionar produto, Gabriela Ribeiro, plataforma vendas, inventário">
   
   <!-- Open Graph / Facebook -->
@@ -56,13 +56,13 @@
         </div>
         
         <div class="field-group">
-          <label for="soldBy" class="field-label required">Vendido por</label>
+          <label for="productLink" class="field-label required">Link do Produto</label>
           <input 
-            type="text" 
-            id="soldBy" 
-            name="soldBy" 
+            type="url" 
+            id="productLink" 
+            name="productLink" 
             class="form-input" 
-            placeholder="Ex.: Mercado Livre"
+            placeholder="Ex.: https://shopee.com.br/seu-produto"
             required
           >
         </div>

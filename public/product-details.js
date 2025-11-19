@@ -1,7 +1,7 @@
-import { getFirestore, collection, getDocs, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
+import { collection, getDocs, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
+import { db } from '../firebase-config.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-   const db = getFirestore();
    const productList = document.getElementById('product-list');
    const productCount = document.getElementById('product-count');
 
@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
            row.innerHTML = `
                <div class="table-cell" role="cell" data-label="Produto:">${product.name}</div>
                <div class="table-cell" role="cell" data-label="Valor:">${product.value}</div>
-               <div class="table-cell" role="cell" data-label="Vendido Por:">
-                   <span>${product.soldBy}</span>
+               <div class="table-cell" role="cell" data-label="Ações:">
                    <div class="action-buttons">
                        <button class="edit-button">Editar</button>
                        <button class="delete-button">Excluir</button>
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
        if (e.target.classList.contains('edit-button')) {
            const productId = e.target.closest('.table-row').getAttribute('data-id');
-           window.location.href = `./pages/editar-produto.html?id=${productId}`;
+           window.location.href = `./pages/cadastro.html?id=${productId}`;
        }
    });
 });
