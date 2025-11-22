@@ -124,6 +124,42 @@ img {
   cursor: pointer;
 }
 
+/* Drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Start off-screen */
+  width: 300px;
+  height: 100%;
+  background-color: #395346;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px 20px;
+  transition: right 0.3s ease;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawer.show {
+  right: 0;
+}
+
+.drawer .nav-item {
+  font-size: 20px;
+}
+
+.drawer .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #f9f6f1;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 /* Hero Section */
 .hero-section {
   padding: 18px 16px 0;
@@ -807,8 +843,17 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .nav-menu {
+    display: none;
+  }
+  .header-icon {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
-  .hamburger {
+  .hamburger, .drawer, .close-btn {
     display: none;
   }
 
