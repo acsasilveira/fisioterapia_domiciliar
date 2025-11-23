@@ -383,6 +383,30 @@ img {
   margin-top: 40px;
 }
 
+.atendimentos-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #395346;
+  color: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.atendimentos-button:hover {
+  transform: translateY(-2px);
+}
+
+.atendimentos-button img {
+  width: 30px;
+  height: 30px;
+}
+
 .secondary-button {
   display: inline-flex;
   align-items: center;
