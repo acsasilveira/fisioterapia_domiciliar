@@ -277,6 +277,8 @@ body {
 }
 
 .product-button {
+  display: flex;
+  align-items: center;
   background-color: #395346;
   color: #f9f6f1;
   border: none;
