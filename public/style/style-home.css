@@ -353,7 +353,7 @@ img {
   gap: 12px;
   background-color: #ffffff;
   color: #395346;
-  border: none;
+  border: solid #395346 0.5px;
   border-radius: 8px;
   padding: 10px;
   font-size: 16px;
