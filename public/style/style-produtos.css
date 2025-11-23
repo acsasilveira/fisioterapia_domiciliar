@@ -285,8 +285,8 @@ body {
   border: none;
   border-radius: 8px;
   padding: 12px 34px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   font-family: "Crimson Pro", serif;
   cursor: pointer;
   transition: all 0.3s ease;
