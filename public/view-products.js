@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <h3 class="product-title">${product.name}</h3>
                     <span class="product-price">${product.value}</span>
                     <p class="product-description">${product.description}</p>
-                    <a href="${product.productLink}" target="_blank" class="product-button">Ver Produto</a>
+                    <a href="${product.productLink}" target="_blank" class="product-button">
+                        <img src="../assets/images/click.svg" alt="Clique Aqui" class="whatsapp-icon">
+                        Acessar Produto
+                    </a>
                 `;
 
                 productsGrid.appendChild(productCard);
