@@ -1,3 +1,12 @@
+/* Importação das fontes */
+@font-face {
+    /* Na hora de configurar os escritos - font-family: 'Crimson Pro', sans-serif; */
+    font-family: 'Crimson Pro';
+    src: url('../fonts/crimson_pro/CrimsonPro-VariableFont_wght.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -6,7 +15,7 @@
 }
 
 body {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Crimson Pro", serif;
   background-color: #f9f6f1;
   color: #395346;
   line-height: 1.6;
@@ -62,7 +71,7 @@ img {
   padding: 8px 12px;
   font-size: 12px;
   font-weight: 600;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -97,7 +106,7 @@ img {
 }
 
 .hero-title {
-  font-size: 28px;
+  font-size: 35px;
   font-family: "Crimson Pro", serif;
   font-weight: 600;
   line-height: 1.2;
@@ -106,7 +115,7 @@ img {
 
 .hero-subtitle {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 500;
   line-height: 1.4;
   color: #395346;
@@ -166,7 +175,7 @@ img {
 
 .step-description {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   line-height: 1.4;
   color: #395346;
@@ -179,7 +188,7 @@ img {
 
 .step-note {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 500;
   font-style: italic;
   line-height: 1.4;
@@ -210,7 +219,7 @@ img {
 
 .cta-subtitle {
   font-size: 15px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   line-height: 1.4;
   color: #395346;
@@ -218,7 +227,7 @@ img {
 
 .cta-highlight {
   font-size: 15px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   line-height: 1.4;
   color: #395346;
@@ -242,7 +251,7 @@ img {
   padding: 14px 22px;
   border-radius: 10px;
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -312,21 +321,21 @@ img {
 
 .footer-name {
   font-size: 18px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 500;
   color: #f9f6f1;
 }
 
 .footer-specialty {
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   color: #f9f6f1;
 }
 
 .footer-description {
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   color: #f9f6f1;
   line-height: 1.5;
@@ -341,7 +350,7 @@ img {
 
 .footer-contact-title {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   color: #f9f6f1;
 }
@@ -382,7 +391,7 @@ img {
 
 .copyright-text {
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   color: #f9f6f1;
   white-space: nowrap;
