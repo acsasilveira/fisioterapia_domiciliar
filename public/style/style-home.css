@@ -353,7 +353,7 @@ img {
   gap: 10px;
   background-color: #395346;
   color: #f9f6f1;
-  padding: 10px 15px 10px 30px;
+  padding: 10px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 14px;
@@ -369,7 +369,7 @@ img {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.cta-button img {
+.services-button img {
   width: 12px;
   height: 12px;
 }
