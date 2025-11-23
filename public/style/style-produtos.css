@@ -279,7 +279,7 @@ body {
 .product-button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #395346;
   color: #f9f6f1;
   border: none;
