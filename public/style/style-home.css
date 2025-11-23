@@ -351,12 +351,13 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #395346;
-  color: #f9f6f1;
+  color: #395346;
+  background-color: #f9f6f1;
+  border: solid #395346;
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -370,8 +371,8 @@ img {
 }
 
 .services-button img {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
 }
 
 .atendimentos-cta {
