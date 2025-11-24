@@ -1,7 +1,8 @@
 import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js';
+import { app } from './firebase-config.js'; // Import the initialized app
 
 document.addEventListener('DOMContentLoaded', function () {
-   const auth = getAuth();
+   const auth = getAuth(app); // Get auth instance from the app
    const loginButton = document.getElementById('login-button');
    const emailInput = document.getElementById('email');
    const passwordInput = document.getElementById('password');

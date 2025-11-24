@@ -1,5 +1,5 @@
 import { collection, getDocs, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
-import { db } from '../firebase-config.js';
+import { db } from './firebase-config.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    const productList = document.getElementById('product-list');
@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                row.innerHTML = `
                    <div class="table-cell" role="cell" data-label="Produto:">${product.name}</div>
-                   <div class="table-cell" role="cell" data-label="Valor:">${product.value}</div>
+                   <div class="table-cell" role="cell" data-label="Valor:">R$ ${product.value}</div>
+                   <div class="table-cell" role="cell" data-label="Vendido por:">${product.soldBy}</div>
                    <div class="table-cell" role="cell" data-label="Ações:">
                        <div class="action-buttons">
                            <button class="edit-button">Editar</button>
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
        }
 
        if (target.classList.contains('edit-button')) {
-           window.location.href = `cadastro.html?id=${productId}`;
+           window.location.href = `cadastro-produtos.html?id=${productId}`;
        }
    });
 });

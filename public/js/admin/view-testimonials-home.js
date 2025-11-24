@@ -1,10 +1,15 @@
 import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
 import { db } from './firebase-config.js';
+import { initCarousel } from '../carousel.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-   const testimonialsContainer = document.getElementById('testimonials-container');
+   const testimonialsContainer = document.querySelector('.carousel-container');
 
    async function fetchTestimonials() {
+       if (!testimonialsContainer) {
+           console.error("O contêiner de depoimentos não foi encontrado.");
+           return;
+       }
        try {
            const querySnapshot = await getDocs(collection(db, 'testimonials'));
            testimonialsContainer.innerHTML = ''; 
@@ -16,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
            querySnapshot.forEach((doc) => {
                const testimonial = doc.data();
+               const slide = document.createElement('div');
+               slide.classList.add('carousel-slide');
+
                const card = document.createElement('article');
                card.classList.add('testimonial-card');
 
@@ -27,11 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
                        <p class="testimonial-role">${testimonial.papelFamiliar}</p>
                    </div>
                `;
-               testimonialsContainer.appendChild(card);
+               slide.appendChild(card);
+               testimonialsContainer.appendChild(slide);
            });
+
+           initCarousel();
+
        } catch (error) {
            console.error("Erro ao buscar depoimentos: ", error);
-           testimonialsContainer.innerHTML = '<p>Erro ao carregar depoimentos.</p>';
+           if (testimonialsContainer) {
+            testimonialsContainer.innerHTML = '<p>Erro ao carregar depoimentos.</p>';
+           }
        }
    }
 

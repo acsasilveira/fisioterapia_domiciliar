@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 productCard.className = 'product-card';
 
                 productCard.innerHTML = `
-                    <img src="${product.imageUrl || '../assets/images/img_placeholder.png'}" alt="${product.name}" class="product-image">
+                    <img src="${product.imageUrl || '../img/img_placeholder.png'}" alt="${product.name}" class="product-image">
                     <h3 class="product-title">${product.name}</h3>
                     <span class="product-price">${product.value}</span>
                     <p class="product-description">${product.description}</p>
                     <a href="${product.productLink}" target="_blank" class="product-button">
-                        <img src="../assets/images/click.svg" alt="Clique Aqui" class="whatsapp-icon">
+                        <img src="../img/click.svg" alt="Clique Aqui" class="whatsapp-icon">
                         Acessar Produto
                     </a>
                 `;

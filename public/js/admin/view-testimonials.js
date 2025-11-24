@@ -1,5 +1,5 @@
 import { collection, getDocs, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
-import { db } from '../firebase-config.js';
+import { db } from './firebase-config.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    const testimonialList = document.getElementById('testimonial-list');
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
                row.setAttribute('data-id', doc.id);
 
                row.innerHTML = `
-                   <div class="table-cell" role="cell" data-label="Paciente:">${testimonial.paciente}</div>
-                   <div class="table-cell" role="cell" data-label="Papel Familiar:">${testimonial.papelFamiliar}</div>
+                   <div class="table-cell" role="cell" data-label="Paciente:">${testimonial.patientName}</div>
+                   <div class="table-cell" role="cell" data-label="Papel Familiar:">${testimonial.familyRole}</div>
                    <div class="table-cell" role="cell" data-label="Ações:">
                        <div class="action-buttons">
                            <button class="edit-button">Editar</button>
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
        }
 
        if (target.classList.contains('edit-button')) {
-           window.location.href = `cadastro-depoimento.html?id=${testimonialId}`;
+           window.location.href = `cadastro-depoimentos.html?id=${testimonialId}`;
        }
    });
 });

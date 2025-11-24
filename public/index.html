@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="./style/style-home.css" />
     <link rel="stylesheet" href="./style/style-faq.css" />
+    <link rel="stylesheet" href="./style/carousel.css" />
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
@@ -283,8 +284,50 @@
       <section class="testimonials-section section">
         <div class="container">
           <h2 class="testimonials-title">Histórias que Inspiram Confiança</h2>
-          <div class="testimonials-grid" id="testimonials-container">
-            <!-- Testimonials will be loaded here -->
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "A Dra. Gabriela é uma profissional incrível! Cuidou da minha
+                  mãe com tanto carinho e dedicação que os resultados foram
+                  surpreendentes. Recomendo de olhos fechados!"
+                </p>
+                <div class="testimonial-author">
+                  <p class="testimonial-name">Maria S.</p>
+                  <p class="testimonial-role">Filha de paciente</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "Minha avó melhorou muito depois que começou a fisioterapia com
+                  a Dra. Gabriela. Ela está mais disposta, com menos dores e até
+                  voltou a caminhar pelo quintal."
+                </p>
+                <div class="testimonial-author">
+                  <p class="testimonial-name">João P.</p>
+                  <p class="testimonial-role">Neto de paciente</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "O atendimento domiciliar faz toda a diferença. Minha esposa se
+                  sente mais segura e confortável fazendo a fisioterapia em
+                  casa. A Dra. Gabriela é muito atenciosa e competente."
+                </p>
+                <div class="testimonial-author">
+                  <p class="testimonial-name">Carlos A.</p>
+                  <p class="testimonial-role">Marido de paciente</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="prev-btn">❮</button>
+              <button class="next-btn">❯</button>
+            </div>
           </div>
         </div>
       </section>
@@ -527,6 +570,7 @@
     <script type="module" src="./js/admin/firebase-config.js"></script>
     <script type="module" src="./js/admin/view-testimonials-home.js"></script>
     <script src="./js/faq.js"></script>
+    <script src="./js/carousel.js"></script>
     <script>
       // Mobile menu toggle
       const hamburger = document.querySelector(".hamburger");
