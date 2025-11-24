@@ -13,8 +13,8 @@
   <meta property="og:description" content="Fisioterapia domiciliar especializada em idosos em Varginha-MG. Prevenção de quedas, alívio de dores e melhora da mobilidade no conforto do seu lar.">
 
   <link rel="stylesheet" href="./style/style-home.css">   
-  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fphysiother4215back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.10"></script>
-  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
 <body>
   <header class="header">
@@ -191,45 +191,12 @@
     </section>
 
     <section class="testimonials-section section">
-      <div class="container">
-        <h2 class="testimonials-title">Histórias que Inspiram Confiança</h2>
-        
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <img src="./assets/images/img_container.svg" alt="5 stars rating" class="testimonial-stars">
-            <p class="testimonial-text">
-              "Depois do acompanhamento, minha mãe voltou a caminhar com mais firmeza e eu me sinto tranquila sabendo que está em boas mãos."
-            </p>
-            <div class="testimonial-author">
-              <p class="testimonial-name">Ana P.</p>
-              <p class="testimonial-role">Filha de paciente</p>
+        <div class="container">
+            <h2 class="testimonials-title">Histórias que Inspiram Confiança</h2>
+            <div class="testimonials-grid" id="testimonials-container">
+                <!-- Testimonials will be loaded here -->
             </div>
-          </article>
-
-          <article class="testimonial-card">
-            <img src="./assets/images/img_container.svg" alt="5 stars rating" class="testimonial-stars">
-            <p class="testimonial-text">
-              "O atendimento domiciliar foi fundamental. Meu pai se sente muito mais à vontade em casa e os resultados apareceram rapidamente."
-            </p>
-            <div class="testimonial-author">
-              <p class="testimonial-name">Carlos M.</p>
-              <p class="testimonial-role">Filho de paciente</p>
-            </div>
-          </article>
-
-          <article class="testimonial-card">
-            <img src="./assets/images/img_container.svg" alt="5 stars rating" class="testimonial-stars">
-            <p class="testimonial-text">
-              "Profissional extremamente competente e carinhosa. Minha sogra adorou os exercícios e já demonstra muito mais autonomia."
-            </p>
-            <div class="testimonial-line"></div>
-            <div class="testimonial-author">
-              <p class="testimonial-name">Mariana S.</p>
-              <p class="testimonial-role">Nora de paciente</p>
-            </div>
-          </article>
         </div>
-      </div>
     </section>
 
     <section id="produtos" class="products-section section">
@@ -304,6 +271,8 @@
     </div>
   </footer>
 
+  <script type="module" src="./firebase-config.js"></script>
+  <script type="module" src="./view-testimonials-home.js"></script>
   <script>
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');

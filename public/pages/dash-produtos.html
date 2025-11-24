@@ -12,6 +12,7 @@
   <meta property="og:description" content="Dashboard de gestão de produtos Gabriela Ribeiro. Gerencie equipamentos de acessibilidade vendidos em múltiplas plataformas.">
   
   <link rel="stylesheet" href="../style/style-dash-produtos.css">
+  <link rel="stylesheet" href="../style/style-hamburguer.css">
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
@@ -22,6 +23,15 @@
       <a href="../index.html">
         <img src="../assets/images/img_frame_15.svg" alt="Gabriela Ribeiro Logo" class="logo-image">
       </a>
+      <nav class="dashboard-nav">
+        <a href="./dash-produtos.html" class="nav-link">Produtos</a>
+        <a href="./dash-depoimentos.html" class="nav-link">Depoimentos</a>
+      </nav>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </header>
 
     <section class="content-wrapper">
@@ -48,5 +58,6 @@
 
   <script type="module" src="../firebase-config.js"></script>
   <script type="module" src="../product-details.js"></script>
+  <script src="../menu.js"></script>
 </body>
 </html>

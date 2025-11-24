@@ -1,0 +1,88 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Depoimento | Gabriela Ribeiro</title>
+  <meta name="description" content="Cadastre novos depoimentos na plataforma Gabriela Ribeiro.">
+  <meta name="keywords" content="cadastrar depoimento, adicionar depoimento, Gabriela Ribeiro, plataforma">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cadastrar Depoimento | Gabriela Ribeiro">
+  <meta property="og:description" content="Cadastre novos depoimentos na plataforma Gabriela Ribeiro.">
+  
+  <link rel="stylesheet" href="../style/style-cadastro.css">  
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+  </head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <div class="header-content">
+        <img src="../assets/images/img_header_logo.svg" alt="Gabriela Ribeiro Logo" class="logo">
+        <button type="button" class="back-button" onclick="history.back()">← Voltar</button>
+      </div>
+    </header>
+    
+    <section class="form-container">
+      <div class="form-header">
+        <h1 class="form-title">Cadastrar Depoimento</h1>
+        <p class="form-subtitle">Preencha os dados do depoimento abaixo</p>
+      </div>
+      
+      <form class="form-fields" id="testimonialForm">
+        <div class="field-group">
+          <label for="paciente" class="field-label required">Paciente</label>
+          <input 
+            type="text" 
+            id="paciente" 
+            name="paciente" 
+            class="form-input" 
+            placeholder="Ex.: João da Silva"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="papelFamiliar" class="field-label required">Papel Familiar</label>
+          <input 
+            type="text" 
+            id="papelFamiliar" 
+            name="papelFamiliar" 
+            class="form-input" 
+            placeholder="Ex.: Filho do paciente"
+            required
+          >
+        </div>
+        
+        <div class="field-group">
+          <label for="depoimento" class="field-label">Depoimento</label>
+          <textarea 
+            id="depoimento" 
+            name="depoimento" 
+            class="form-textarea" 
+            placeholder="Descreva aqui o depoimento..."
+            required
+          ></textarea>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="secondary-button" onclick="cancelForm()">Cancelar</button>
+          <button type="submit" class="primary-button">+ Adicionar Depoimento</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="../firebase-config.js"></script>
+  <script type="module" src="../manage-testimonials.js"></script>
+  
+  <script>
+    function cancelForm() {
+      if (confirm('Tem certeza que deseja cancelar? Todos os dados serão perdidos.')) {
+        document.getElementById('testimonialForm').reset();
+        history.back();
+      }
+    }
+  </script>
+</body>
+</html>

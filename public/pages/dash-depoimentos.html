@@ -1,0 +1,63 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depoimentos Cadastrados - Gabriela Ribeiro | Gestão de Depoimentos</title>
+  <meta name="description" content="Dashboard de gestão de depoimentos Gabriela Ribeiro.">
+  <meta name="keywords" content="depoimentos, gestão depoimentos, Gabriela Ribeiro">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Depoimentos Cadastrados - Gabriela Ribeiro | Gestão de Depoimentos">
+  <meta property="og:description" content="Dashboard de gestão de depoimentos Gabriela Ribeiro.">
+  
+  <link rel="stylesheet" href="../style/style-dash-produtos.css">
+  <link rel="stylesheet" href="../style/style-hamburguer.css">
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+  </head>
+
+<body>
+  <main class="main-container">
+    <header class="header-container">
+      <a href="../index.html">
+        <img src="../assets/images/img_frame_15.svg" alt="Gabriela Ribeiro Logo" class="logo-image">
+      </a>
+      <nav class="dashboard-nav">
+        <a href="./dash-produtos.html" class="nav-link">Produtos</a>
+        <a href="./dash-depoimentos.html" class="nav-link">Depoimentos</a>
+      </nav>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </header>
+
+    <section class="content-wrapper">
+      <div class="header-section">
+        <h1 class="page-title">Depoimentos Cadastrados <span id="testimonial-count">(0)</span></h1>
+        <a href="./cadastro-depoimento.html">
+          <button class="add-button" type="button">+ Adicionar Depoimento</button>
+        </a>
+      </div>
+
+      <div class="products-table" role="table" aria-label="Tabela de depoimentos cadastrados">
+        <div class="table-header" role="rowgroup">
+          <div class="header-cell" role="columnheader">Paciente</div>
+          <div class="header-cell" role="columnheader">Papel Familiar</div>
+          <div class="header-cell" role="columnheader">Ações</div>
+        </div>
+
+        <div class="table-body" id="testimonial-list" role="rowgroup">
+          <!-- Testimonial rows will be inserted here dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="../firebase-config.js"></script>
+  <script type="module" src="../view-testimonials.js"></script>
+  <script src="../menu.js"></script>
+</body>
+</html>
