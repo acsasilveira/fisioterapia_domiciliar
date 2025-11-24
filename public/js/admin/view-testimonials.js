@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
                row.setAttribute('data-id', doc.id);
 
                row.innerHTML = `
-                   <div class="table-cell" role="cell" data-label="Paciente:">${testimonial.patientName}</div>
-                   <div class="table-cell" role="cell" data-label="Papel Familiar:">${testimonial.familyRole}</div>
+                   <div class="table-cell" role="cell" data-label="Paciente:">${testimonial.paciente}</div>
+                   <div class="table-cell" role="cell" data-label="Papel Familiar:">${testimonial.papelFamiliar}</div>
                    <div class="table-cell" role="cell" data-label="Ações:">
                        <div class="action-buttons">
                            <button class="edit-button">Editar</button>
