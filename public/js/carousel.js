@@ -1,39 +1,42 @@
 export function initCarousel() {
-  const slides = document.querySelectorAll(".carousel-slide");
+  const container = document.querySelector(".carousel-container");
   const prevBtn = document.querySelector(".prev-btn");
   const nextBtn = document.querySelector(".next-btn");
 
-  if (slides.length === 0) {
-    return;
-  }
-  
-  if (!prevBtn || !nextBtn) {
-    slides.forEach((slide, index) => {
-        slide.style.display = index === 0 ? "block" : "none";
-    });
+  if (!container || !prevBtn || !nextBtn) {
     return;
   }
 
-  let currentSlide = 0;
+  const getSlideWidth = () => {
+    const slide = container.querySelector('.carousel-slide');
+    return slide ? slide.offsetWidth : 0;
+  };
 
-  function showSlide(n) {
-    slides.forEach((slide, index) => {
-      slide.style.display = index === n ? "block" : "none";
-    });
-  }
+  const scrollNext = () => {
+    const slideWidth = getSlideWidth();
+    if (slideWidth === 0) return;
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+    const isAtEnd = container.scrollWidth - container.scrollLeft - container.clientWidth < 1;
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+    if (isAtEnd) {
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: slideWidth, behavior: 'smooth' });
+    }
+  };
 
-  prevBtn.addEventListener("click", prevSlide);
-  nextBtn.addEventListener("click", nextSlide);
+  const scrollPrev = () => {
+    const slideWidth = getSlideWidth();
+    if (slideWidth === 0) return;
 
-  showSlide(currentSlide);
+    if (container.scrollLeft < 1) {
+      const endPosition = container.scrollWidth - container.clientWidth;
+      container.scrollTo({ left: endPosition, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+    }
+  };
+
+  nextBtn.addEventListener("click", scrollNext);
+  prevBtn.addEventListener("click", scrollPrev);
 }

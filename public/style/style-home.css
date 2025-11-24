@@ -587,13 +587,6 @@ img {
   margin-bottom: 66px;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  margin-bottom: 40px;
-}
-
 .testimonial-card {
   background-color: #ffffff;
   border-radius: 14px;
@@ -885,10 +878,6 @@ img {
     line-height: 24px;
   }
 
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .contact-buttons {
     flex-direction: row;
     gap: 28px;
@@ -980,10 +969,6 @@ img {
     width: 300px;
     height: 500px;
     margin-bottom: 0;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .footer-content {

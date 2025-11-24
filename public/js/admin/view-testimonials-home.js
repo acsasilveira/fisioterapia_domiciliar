@@ -10,12 +10,18 @@ document.addEventListener('DOMContentLoaded', function () {
            console.error("O contêiner de depoimentos não foi encontrado.");
            return;
        }
+
        try {
            const querySnapshot = await getDocs(collection(db, 'testimonials'));
-           testimonialsContainer.innerHTML = ''; 
+           
+           testimonialsContainer.innerHTML = '';
 
            if (querySnapshot.empty) {
                testimonialsContainer.innerHTML = '<p>Nenhum depoimento encontrado.</p>';
+               const carouselControls = document.querySelector('.carousel-controls');
+               if (carouselControls) {
+                   carouselControls.style.display = 'none';
+               }
                return;
            }
 
@@ -28,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
                card.classList.add('testimonial-card');
 
                card.innerHTML = `
-                   <img src="./img/img_container.svg" alt="aspas" class="testimonial-stars">
                    <p class="testimonial-text">\"${testimonial.depoimento}\"</p>
                    <div class="testimonial-author">
                        <p class="testimonial-name">${testimonial.paciente}</p>
@@ -39,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
                testimonialsContainer.appendChild(slide);
            });
 
+           // Inicializa o carrossel depois que os depoimentos são carregados.
            initCarousel();
 
        } catch (error) {
