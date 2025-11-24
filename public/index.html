@@ -12,7 +12,8 @@
   <meta property="og:title" content="Fisioterapia Domiciliar para Idosos | Dra. Gabriela Ribeiro">
   <meta property="og:description" content="Fisioterapia domiciliar especializada em idosos em Varginha-MG. Prevenção de quedas, alívio de dores e melhora da mobilidade no conforto do seu lar.">
 
-  <link rel="stylesheet" href="./style/style-home.css">   
+  <link rel="stylesheet" href="./style/style-home.css">
+  <link rel="stylesheet" href="./style/style-faq.css">
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
@@ -199,6 +200,43 @@
         </div>
     </section>
 
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Dúvidas Frequentes</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como funcionam os atendimentos?</span>
+              <img src="./assets/images/arrow-down.svg" alt="Seta para baixo" class="faq-arrow">
+            </button>
+            <div class="faq-answer">
+              <p>Os atendimentos são realizados no conforto do seu lar, com horários flexíveis. A primeira consulta serve para avaliar as necessidades do paciente e traçar um plano de tratamento personalizado.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Quais as formas de pagamento?</span>
+              <img src="./assets/images/arrow-down.svg" alt="Seta para baixo" class="faq-arrow">
+            </button>
+            <div class="faq-answer">
+              <p>Aceitamos pagamentos via Pix, transferência bancária e dinheiro. Oferecemos pacotes de sessões com valores especiais para garantir a continuidade do tratamento.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>A Dra. Gabriela atende em quais bairros?</span>
+              <img src="./assets/images/arrow-down.svg" alt="Seta para baixo" class="faq-arrow">
+            </button>
+            <div class="faq-answer">
+              <p>O atendimento domiciliar é realizado em toda a cidade de Varginha-MG, incluindo a zona rural, com agendamento prévio para garantir a melhor logística.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="produtos" class="products-section section">
       <div class="container">
         <div class="products-card">
@@ -273,6 +311,7 @@
 
   <script type="module" src="./firebase-config.js"></script>
   <script type="module" src="./view-testimonials-home.js"></script>
+  <script src="./faq.js"></script>
   <script>
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
