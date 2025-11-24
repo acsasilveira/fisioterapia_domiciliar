@@ -1,34 +1,64 @@
+/* Estilos gerais para o menu hambúrguer */
 .hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.4s;
+.hamburger-menu .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px auto;
+  transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .dashboard-nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #395346;
-    }
+/* Rotação dos ícones para o estado "aberto" */
+.hamburger-menu.open .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
 
-    .dashboard-nav.active {
-        display: flex;
-    }
+.hamburger-menu.open .bar:nth-child(2) {
+  opacity: 0;
+}
 
-    .hamburger-menu {
-        display: flex;
-    }
+.hamburger-menu.open .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Estilos para o menu de navegação lateral */
+.nav-menu {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  top: 0;
+  right: -300px; /* Começa fora da tela */
+  width: 300px;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha itens à esquerda */
+  background-color: #395346;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  padding-top: 60px; /* Espaço no topo do menu (reduzido) */
+  z-index: 999;
+}
+
+.nav-menu.open {
+  display: flex;
+  right: 0; /* Desliza para a tela */
+}
+
+.nav-item {
+  color: #fff;
+  padding: 0.75rem 2rem; /* Padding superior/inferior (reduzido) e esquerdo/direito */
+  text-decoration: none;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left; /* Alinha o texto dos itens à esquerda */
+}
+
+.nav-item:hover {
+  background-color: #4a6b57;
 }
