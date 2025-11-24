@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                row.innerHTML = `
                    <div class="table-cell" role="cell" data-label="Produto:">${product.name}</div>
                    <div class="table-cell" role="cell" data-label="Valor:">R$ ${product.value}</div>
-                   <div class="table-cell" role="cell" data-label="Vendido por:">${product.soldBy}</div>
+                   <div class="table-cell" role="cell" data-label="Link do Produto:"><a href="${product.productLink}" target="_blank">Ver produto</a></div>
                    <div class="table-cell" role="cell" data-label="Ações:">
                        <div class="action-buttons">
                            <button class="edit-button">Editar</button>
