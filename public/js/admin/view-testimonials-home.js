@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                card.classList.add('testimonial-card');
 
                card.innerHTML = `
-                   <img src="./assets/images/img_container.svg" alt="5 stars rating" class="testimonial-stars">
+                   <img src="./img/img_container.svg" alt="aspas" class="testimonial-stars">
                    <p class="testimonial-text">\"${testimonial.depoimento}\"</p>
                    <div class="testimonial-author">
                        <p class="testimonial-name">${testimonial.paciente}</p>
