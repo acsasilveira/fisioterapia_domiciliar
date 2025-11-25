@@ -6,6 +6,10 @@
   z-index: 1000;
 }
 
+.hamburger-menu.open {
+  z-index: 1001; /* Garante que o menu hambúrguer esteja no topo quando aberto */
+}
+
 .hamburger-menu .bar {
   display: block;
   width: 28px;
@@ -21,7 +25,7 @@
 }
 
 .hamburger-menu.open .bar:nth-child(2) {
-  opacity: 0;
+  opacity: 1;
 }
 
 .hamburger-menu.open .bar:nth-child(3) {
@@ -41,7 +45,7 @@
   background-color: #395346;
   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;
-  padding-top: 60px; /* Espaço no topo do menu (reduzido) */
+  padding-top: 60px; /* Espaço no topo do menu */
   z-index: 999;
 }
 
@@ -52,7 +56,7 @@
 
 .nav-item {
   color: #fff;
-  padding: 0.75rem 2rem; /* Padding superior/inferior (reduzido) e esquerdo/direito */
+  padding: 0.5rem; /* Espaçamento ajustado */
   text-decoration: none;
   font-size: 1.2rem;
   width: 100%;
