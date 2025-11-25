@@ -819,22 +819,6 @@ img {
 }
 
 @media (max-width: 767px) {
-  .nav-menu {
-    display: none;
-  }
-  .header-icon {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .hamburger, .drawer, .close-btn {
-    display: none;
-  }
-
-  .nav-menu {
-    display: flex;
-  }
 
   .hero-content {
     flex-direction: row;
@@ -975,9 +959,5 @@ img {
 @media (min-width: 1280px) {
   .container {
     padding: 0 80px;
-  }
-
-  .nav-menu {
-    gap: 98px;
   }
 }
