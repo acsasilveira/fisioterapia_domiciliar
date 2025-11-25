@@ -36,16 +36,13 @@
 .nav-menu {
   display: none; /* Oculto por padrão */
   position: fixed;
-  top: 0;
   right: -300px; /* Começa fora da tela */
-  width: 300px;
+  width: 250px;
   height: 100%;
   flex-direction: column;
   align-items: flex-start; /* Alinha itens à esquerda */
   background-color: #395346;
-  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;
-  padding-top: 60px; /* Espaço no topo do menu */
   z-index: 999;
 }
 

@@ -82,12 +82,6 @@ img {
   height: 56px;
 }
 
-.nav-menu {
-  display: none;
-  gap: 98px;
-  align-items: center;
-}
-
 .nav-item {
   font-size: 23px;
   font-family: "Crimson Pro", serif;
