@@ -38,7 +38,6 @@
   position: fixed;
   right: -300px; /* Começa fora da tela */
   width: 250px;
-  height: 100%;
   flex-direction: column;
   align-items: flex-start; /* Alinha itens à esquerda */
   background-color: #395346;
