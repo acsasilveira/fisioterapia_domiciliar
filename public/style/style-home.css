@@ -712,7 +712,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 24px;
+  padding: 24px;
 }
 
 .footer-column {
@@ -773,7 +773,7 @@ img {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  padding-top: 24px;
+  padding: 24px;
   border-top: 1px solid #f9f6f1;
 }
 
