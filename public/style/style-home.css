@@ -710,8 +710,17 @@ img {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   text-align: center;
 }
 
@@ -719,66 +728,44 @@ img {
   font-size: 20px;
   font-weight: 500;
   line-height: 25px;
-  margin-bottom: 8px;
 }
 
 .footer-title {
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 8px;
 }
 
-.footer-description {
-  font-size: 13px;
+.footer-license {
+  font-size: 14px;
   line-height: 20px;
-  margin-bottom: 24px;
 }
 
 .footer-section-title {
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .footer-contact {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 24px;
 }
 
-.footer-contact-item {
+.footer-contact-item, .footer-social {
   display: flex;
   align-items: center;
-  gap: 12px;
   justify-content: center;
+  gap: 12px;
 }
 
-.footer-contact-item img {
+.footer-contact-item img, .footer-social img {
   width: 20px;
   height: 20px;
 }
 
-.footer-contact-text {
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.footer-social img {
-  width: 20px;
-  height: 20px;
-}
-
-.footer-social-text {
+.footer-contact-text, .footer-social-text {
   font-size: 16px;
   line-height: 19px;
 }
@@ -787,14 +774,10 @@ img {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 12px;
+  padding-top: 24px;
+  border-top: 1px solid #f9f6f1;
 }
 
-.footer-license {
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-}
 
 /* Responsive media queries */
 @media (min-width: 640px) {
@@ -894,10 +877,12 @@ img {
     margin-bottom: 0;
   }
 
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
+  .footer-column {
     text-align: left;
+  }
+
+  .footer-contact-item, .footer-social {
+    justify-content: flex-start;
   }
 }
 
