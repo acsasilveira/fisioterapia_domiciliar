@@ -82,21 +82,6 @@ img {
   height: 56px;
 }
 
-.nav-item {
-  font-size: 23px;
-  font-family: "Crimson Pro", serif;
-  font-weight: 500;
-  line-height: 26px;
-  color: #f9f6f1;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.nav-item:hover {
-  color: #bfd7c4;
-}
-
 .header-icon {
   background-color: #bfd7c4;
   border-radius: 10px;
@@ -107,51 +92,6 @@ img {
 .header-icon img {
   width: 24px;
   height: 24px;
-}
-
-.hamburger {
-  display: block;
-  background: none;
-  border: none;
-  color: #f9f6f1;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Drawer */
-.drawer {
-  position: fixed;
-  top: 0;
-  right: -300px; /* Start off-screen */
-  width: 300px;
-  height: 100%;
-  background-color: #395346;
-  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
-  padding: 60px 20px 20px;
-  transition: right 0.3s ease;
-  z-index: 200;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.drawer.show {
-  right: 0;
-}
-
-.drawer .nav-item {
-  font-size: 20px;
-}
-
-.drawer .close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: #f9f6f1;
-  font-size: 30px;
-  cursor: pointer;
 }
 
 /* Hero Section */
