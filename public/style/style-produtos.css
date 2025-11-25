@@ -307,119 +307,6 @@ body {
   margin-right: 3px;
 }
 
-.footer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  background-color: #395346;
-  padding: 34px 16px;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1034px;
-  margin: 0 auto;
-  gap: 24px;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.footer-name {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.25;
-  color: #f9f6f1;
-  margin-bottom: 8px;
-}
-
-.footer-specialty {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.25;
-  color: #f9f6f1;
-  margin-bottom: 4px;
-}
-
-.footer-description {
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #f9f6f1;
-  width: 100%;
-  margin-bottom: 8px;
-}
-
-.contact-title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #f9f6f1;
-  margin-top: 8px;
-  margin-bottom: 6px;
-}
-
-.contact-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.contact-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.contact-text {
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #f9f6f1;
-  text-decoration: none;
-}
-
-.contact-text:hover {
-  text-decoration: underline;
-}
-
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 100%;
-  text-align: right;
-}
-
-.copyright-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #f9f6f1;
-}
-
-.crefito-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #f9f6f1;
-}
-
 /* Typography */
 .crimson-font {
   font-family: "Crimson Pro", serif;
@@ -481,21 +368,6 @@ body {
     font-size: 16px;
   }
 
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 180px;
-  }
-
-  .footer-left {
-    width: 60%;
-  }
-
-  .footer-right {
-    width: 40%;
-    align-items: flex-end;
-  }
 }
 
 @media (min-width: 768px) {
@@ -526,18 +398,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 0 94px;
-  }
-
-  .footer-content {
-    margin: 0 224px;
-  }
-
-  .footer-left {
-    width: 34%;
-  }
-
-  .footer-right {
-    width: 36%;
   }
 }
 
