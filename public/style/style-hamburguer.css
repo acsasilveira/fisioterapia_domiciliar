@@ -40,6 +40,7 @@
   width: 250px;
   flex-direction: column;
   align-items: flex-start; /* Alinha itens à esquerda */
+  justify-content: flex-start;
   background-color: #395346;
   transition: right 0.3s ease-in-out;
   z-index: 999;
