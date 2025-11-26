@@ -82,7 +82,6 @@ img {
   width: 100%;
   margin-top: 32px;
   gap: 48px;
-  padding: 0 16px;
 }
 
 .hero-section {
@@ -296,7 +295,6 @@ img {
   .content-section {
     margin-top: 48px;
     gap: 64px;
-    padding: 0 24px;
   }
 
   .hero-title {
@@ -369,7 +367,6 @@ img {
   .content-section {
     margin-top: 64px;
     gap: 84px;
-    padding: 0 32px;
   }
 
   .hero-title {
@@ -427,9 +424,6 @@ img {
 }
 
 @media (min-width: 1024px) {
-  .content-section {
-    padding: 0 42px;
-  }
 
   .hero-title {
     font-size: 45px;
