@@ -120,6 +120,7 @@ img {
   padding: 24px;
   gap: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 25px;
 }
 
 .cases-title {
