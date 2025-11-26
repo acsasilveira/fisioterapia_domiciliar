@@ -141,6 +141,12 @@ img {
   text-align:left;
 }
 
+.others-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Responsive media queries */
 @media (min-width: 640px) {
   .header {
