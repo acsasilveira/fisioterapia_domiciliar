@@ -99,7 +99,6 @@ img {
 
 .info-text strong {
   font-weight: 700;
-  color:#395346;
 }
 
 .cases-container {
@@ -124,12 +123,12 @@ img {
 }
 
 .cases-title {
-  font-size: 24px;
+  font-size: 26px;
   font-family: "Crimson Pro", serif;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   color: #395346;
-  text-align: center;
+  text-align: left;
 }
 
 .cases-topics {
@@ -137,7 +136,7 @@ img {
   font-family: "Crimson Pro", serif;
   font-weight: 400;
   line-height: 1.4;
-  color: #395346;
+  color: black;
   text-align:left;
 }
 
