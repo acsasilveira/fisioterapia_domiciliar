@@ -422,7 +422,7 @@ img {
 }
 
 .professional-bg {
-  width: 100%;  
+  width: 100%; 
   object-fit: cover;
 }
 
@@ -796,6 +796,10 @@ img {
     flex-direction: row;
     gap: 28px;
   }
+
+  .professional-bg {
+    height: 746px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -815,6 +819,10 @@ img {
 
   .footer-contact-item, .footer-social {
     justify-content: center;
+  }
+
+  .professional-bg {
+    height: 746px;
   }
 }
 
@@ -888,6 +896,10 @@ img {
     margin-bottom: 0;
   }
 
+  .professional-bg {
+    height: 746px;
+  }
+  
   .footer-column {
     text-align: left;
   }
