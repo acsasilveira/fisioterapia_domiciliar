@@ -147,6 +147,83 @@ img {
   align-items: center;
 }
 
+.cta-section {
+  background-color: #f9f6f1;
+  padding: 48px 16px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 24px;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  line-height: 32px;
+  color: #395346;
+  margin-bottom: 12px;
+}
+
+.cta-subtitle {
+  font-size: 17px;
+  line-height: 21px;
+  color: #395346;
+  margin-bottom: 20px;
+}
+
+.cta-highlight {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  color: #395346;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.cta-button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #395346;
+  color: #ffffff;
+  padding: 14px 22px 14px 56px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.cta-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  color: #395346;
+  padding: 16px 28px 16px 58px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.cta-button-primary:hover,
+.cta-button-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.cta-button-primary img,
+.cta-button-secondary img {
+  width: 24px;
+  height: 24px;
+}
+
 /* Responsive media queries */
 @media (min-width: 640px) {
   .header {
@@ -288,7 +365,7 @@ img {
     font-size: 18px;
   }
 
-  .contact-text {
+  .cta-text {
     font-size: 16px;
   }
 }
