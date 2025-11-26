@@ -2,6 +2,9 @@
 #faq-section {
     padding: 60px 20px;
     background-color: #f9f6f1; /* Light background color from your theme */
+    background-color: rgba(191, 215, 196, 0.76);
+    background-size: cover;
+    background-position: center;
 }
 
 .faq-title {
