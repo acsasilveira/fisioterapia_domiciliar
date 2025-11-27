@@ -54,26 +54,6 @@ body {
   height: 56px;
 }
 
-.back-button {
-  background-color: #bfd7c4;
-  color: #395346;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: "Crimson Pro", serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 6px;
-  align-self: flex-end;
-}
-
-.back-button:hover {
-  background-color: #a8c4ad;
-  transform: translateY(-1px);
-}
-
 .content-section {
   display: flex;
   flex-direction: column;
