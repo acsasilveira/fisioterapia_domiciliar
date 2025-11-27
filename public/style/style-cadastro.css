@@ -48,6 +48,7 @@ body {
 }
 
 .back-button {
+  background-color: #395346;
   color: #ffffff;
   border: none;
   border-radius: 8px;
