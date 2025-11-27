@@ -114,14 +114,6 @@ img {
   color: #395346;
 }
 
-.atendimentos-subtitle {
-  font-size: 16px;
-  font-family: "Crimson Pro", serif;
-  line-height: 1.4;
-  color: #395346;
-  margin: 0 16px;
-}
-
 .steps-container {
   display: flex;
   flex-direction: column;
