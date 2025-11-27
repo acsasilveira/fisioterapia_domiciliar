@@ -622,13 +622,13 @@ img {
 }
 
 /* Contact Section */
-.cta-section {
+.contact-section {
   background-color: #f9f6f1;
   padding: 48px 16px;
   text-align: center;
 }
 
-.cta-title {
+.contact-title {
   font-size: 24px;
   font-family: "Crimson Pro", serif;
   font-weight: 600;
@@ -637,14 +637,14 @@ img {
   margin-bottom: 12px;
 }
 
-.cta-subtitle {
+.contact-subtitle {
   font-size: 17px;
   line-height: 21px;
   color: #395346;
   margin-bottom: 20px;
 }
 
-.cta-highlight {
+.contact-highlight {
   font-size: 17px;
   font-weight: 600;
   line-height: 21px;
@@ -652,14 +652,14 @@ img {
   margin-bottom: 30px;
 }
 
-.cta-buttons {
+.contact-buttons {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
 }
 
-.cta-button-primary {
+.contact-button-primary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -674,7 +674,7 @@ img {
   transition: transform 0.3s ease;
 }
 
-.cta-button-secondary {
+.contact-button-secondary {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -688,13 +688,13 @@ img {
   transition: transform 0.3s ease;
 }
 
-.cta-button-primary:hover,
-.cta-button-secondary:hover {
+.contact-button-primary:hover,
+.contact-button-secondary:hover {
   transform: translateY(-2px);
 }
 
-.cta-button-primary img,
-.cta-button-secondary img {
+.contact-button-primary img,
+.contact-button-secondary img {
   width: 24px;
   height: 24px;
 }
