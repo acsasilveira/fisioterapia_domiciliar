@@ -70,7 +70,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin: 0 16px;
+  margin: 30 16px;
 }
 
 .main-title {
@@ -309,7 +309,7 @@ body {
   }
 
   .intro-section {
-    margin: 0 56px;
+    margin: 30 56px;
   }
 
   .main-title {
