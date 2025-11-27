@@ -1,5 +1,5 @@
 import { collection, addDoc, getDoc, doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js';
-import { db } from '../firebase-config.js';
+import { db } from './firebase-config.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    const productForm = document.getElementById('productForm');
