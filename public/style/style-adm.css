@@ -1,3 +1,13 @@
+/* Importação das fontes */
+@font-face {
+  /* Na hora de configurar os escritos - font-family: 'Crimson Pro', sans-serif; */
+  font-family: 'Crimson Pro';
+  src: url('../fonts/crimson_pro/CrimsonPro-VariableFont_wght.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -6,8 +16,7 @@
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    sans-serif;
+  font-family: "Crimson Pro", serif;
   background-color: #f9f6f1;
   min-height: 100vh;
   display: flex;
@@ -88,7 +97,7 @@ body {
 
 .subtitle {
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   line-height: 20px;
   text-align: center;
@@ -117,7 +126,7 @@ body {
 
 .input-label {
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   line-height: 17px;
   text-align: left;
@@ -126,7 +135,7 @@ body {
 
 .input-field {
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 400;
   line-height: 17px;
   color: #737373;
@@ -155,7 +164,7 @@ body {
 
 .login-button {
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   line-height: 17px;
   text-align: center;
@@ -180,7 +189,7 @@ body {
 
 .back-link {
   font-size: 14px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   line-height: 17px;
   text-align: left;
@@ -211,7 +220,7 @@ body {
 
 .forgot-password-text {
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 500;
   line-height: 15px;
   text-align: center;
@@ -220,7 +229,7 @@ body {
 
 .support-button {
   font-size: 12px;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   font-weight: 600;
   line-height: 15px;
   text-align: center;
@@ -237,9 +246,6 @@ body {
   background-color: #2a2a2a;
   transform: scale(1.05);
 }
-
-/* Typography */
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Inter:wght@400;500;600&display=swap");
 
 /* Interactive states */
 button:focus {
