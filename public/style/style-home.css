@@ -118,7 +118,6 @@ img {
   width: 100%;
   max-width: 314px;
   height: 158px;
-  margin: 0 auto;
 }
 
 .hero-logo {
@@ -167,7 +166,6 @@ img {
   font-weight: 600;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0 auto;
   width: fit-content;
 }
 
@@ -791,6 +789,14 @@ img {
   .hero-subtitle {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .hero-logo-stack {
+    margin: 0 auto;
+  }
+
+  .cta-button {
+    margin: 0 auto;
   }
 
   .contact-buttons {
