@@ -153,7 +153,7 @@ img {
   margin-top: 16px;
 }
 
-.cta-button {
+.cta-button-desktop {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -167,6 +167,10 @@ img {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: fit-content;
+}
+
+.cta-button-mobile {
+  display: none;
 }
 
 .cta-button:hover {
@@ -795,8 +799,25 @@ img {
     margin: 0 auto;
   }
 
-  .cta-button {
+  .cta-button-mobile {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #395346;
+    color: #f9f6f1;
+    padding: 14px 20px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto;
+    width: fit-content;
+  }
+
+  .cta-button-desktop {
+    display: none;
   }
 
   .contact-buttons {
