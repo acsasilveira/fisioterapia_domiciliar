@@ -190,7 +190,7 @@ img {
   gap: 10px;
   background-color: #395346;
   color: #ffffff;
-  padding: 14px 22px 14px 56px;
+  padding: 14px 22px 14px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
@@ -205,7 +205,7 @@ img {
   gap: 12px;
   background-color: #ffffff;
   color: #395346;
-  padding: 16px 28px 16px 58px;
+  padding: 16px 28px 16px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
