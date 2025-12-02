@@ -425,12 +425,7 @@ img {
 
 .decorative-element{
   width: 100%;
-  height: 75px;
-  object-fit: cover;
-}
-
-.professional-bg {
-  width: 100%; 
+  height: 80px;
   object-fit: cover;
 }
 
