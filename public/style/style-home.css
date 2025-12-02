@@ -789,6 +789,10 @@ img {
     gap: 0px;
   }
 
+  .hero-content{
+    gap: 0px;
+  }
+
   .hero-title {
     font-size: 32px;
     line-height: 36px;
