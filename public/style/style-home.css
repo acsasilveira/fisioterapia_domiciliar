@@ -838,6 +838,10 @@ img {
     margin-bottom: 50px;
   }
 
+  .atendimentos-button{
+    text-align: center;
+  }
+
   .contact-buttons {
     flex-direction: row;
     gap: 28px;
