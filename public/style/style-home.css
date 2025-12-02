@@ -842,11 +842,6 @@ img {
     text-align: center;
   }
 
-  .contact-buttons {
-    flex-direction: row;
-    gap: 28px;
-  }
-
   .professional-bg {
     height: 746px;
   }
