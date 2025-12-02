@@ -118,7 +118,6 @@ img {
   width: 100%;
   max-width: 314px;
   height: 158px;
-  margin: 0 auto;
 }
 
 .hero-logo {
@@ -154,21 +153,24 @@ img {
   margin-top: 16px;
 }
 
-.cta-button {
+.cta-button-desktop {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   background-color: #395346;
   color: #f9f6f1;
-  padding: 14px 20px 14px 56px;
+  padding: 14px 20px 14px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0 auto;
   width: fit-content;
+}
+
+.cta-button-mobile {
+  display: none;
 }
 
 .cta-button:hover {
@@ -292,7 +294,7 @@ img {
   padding: 10px;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Inter", sans-serif;
+  font-family: "Crimson Pro", serif;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -603,7 +605,7 @@ img {
   gap: 10px;
   background-color: #ffffff;
   color: #395346;
-  padding: 12px 24px 12px 54px;
+  padding: 12px 24px 12px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
@@ -665,7 +667,7 @@ img {
   gap: 10px;
   background-color: #395346;
   color: #ffffff;
-  padding: 14px 22px 14px 56px;
+  padding: 14px 22px 14px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
@@ -680,7 +682,7 @@ img {
   gap: 12px;
   background-color: #ffffff;
   color: #395346;
-  padding: 16px 28px 16px 58px;
+  padding: 16px 28px 16px;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
@@ -783,6 +785,14 @@ img {
     padding: 32px 24px;
   }
 
+  .column{
+    gap: 0px;
+  }
+
+  .hero-content{
+    gap: 0px;
+  }
+
   .hero-title {
     font-size: 32px;
     line-height: 36px;
@@ -793,9 +803,43 @@ img {
     line-height: 24px;
   }
 
-  .contact-buttons {
-    flex-direction: row;
-    gap: 28px;
+  .hero-logo-stack {
+    margin: 0 auto;
+  }
+
+  .cta-button-mobile {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #395346;
+    color: #f9f6f1;
+    padding: 14px 20px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .cta-button-desktop {
+    display: none;
+  }
+
+  .services-title {
+    font-size: 35px;
+    font-family: "Crimson Pro", serif;
+    font-weight: 700;
+    line-height: 36px;
+    color: #395346;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .atendimentos-button{
+    text-align: center;
   }
 
   .professional-bg {
@@ -919,7 +963,7 @@ img {
     line-height: 25px;
   }
 
-  .cta-button {
+  .cta-button-desktop {
     font-size: 20px;
   }
 

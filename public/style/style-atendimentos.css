@@ -231,70 +231,46 @@ img {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  width: 100%;
-  margin-top: 20px;
 }
 
-.cta-button {
-  display: flex;
+.cta-button-primary {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  padding: 14px 22px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-family: "Crimson Pro", serif;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-  min-width: 280px;
-}
-
-.cta-button.primary {
   background-color: #395346;
   color: #ffffff;
+  padding: 14px 22px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.cta-button.primary:hover {
-  background-color: #2d4238;
-  transform: translateY(-1px);
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.cta-button.secondary {
-  background-color: #ffffff;
-  color: #395346;
-}
-
-.cta-button.secondary:hover {
-  background-color: #f5f5f5;
-  transform: translateY(-1px);
-}
-
-.button-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.contact-item {
-  display: flex;
+.cta-button-secondary {
+  display: inline-flex;
   align-items: center;
   gap: 12px;
+  background-color: #ffffff;
+  color: #395346;
+  padding: 16px 28px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
 }
 
-.contact-icon {
-  width: 20px;
-  height: 20px;
+.cta-button-primary:hover,
+.cta-button-secondary:hover {
+  transform: translateY(-2px);
 }
 
-.contact-text {
-  font-size: 14px;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  color: #f9f6f1;
+.cta-button-primary img,
+.cta-button-secondary img {
+  width: 24px;
+  height: 24px;
 }
 
 /* Responsive media queries */
