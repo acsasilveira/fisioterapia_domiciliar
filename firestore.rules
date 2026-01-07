@@ -1,25 +1,9 @@
 rules_version='2'
 
-service cloud.firestore {
-  match /databases/{database}/documents {
+match /products/{id} {
+  allow read, write: if true;
+}
 
-    // Função para verificar se o usuário está logado
-    function isAutenticado() {
-      return request.auth != null;
-    }
-
-    match /products/{id} {
-      allow read: if true; // Público
-      allow create: if isAutenticado();
-      allow update: if isAutenticado();
-      allow delete: if isAutenticado();
-    }
-
-    match /testimonials/{id} {
-      allow read: if true;
-      allow create: if isAutenticado();
-      allow update: if isAutenticado();
-      allow delete: if isAutenticado();
-    }
-  }
+match /testimonials/{id} {
+  allow read, write: if true;
 }
