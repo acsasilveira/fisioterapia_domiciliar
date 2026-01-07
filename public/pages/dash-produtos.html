@@ -1,6 +1,6 @@
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF--8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos Cadastrados | Gabriela Ribeiro</title>
   <meta name="description" content="Dashboard de gestão de produtos Gabriela Ribeiro.">
@@ -13,8 +13,6 @@
   
   <link rel="stylesheet" href="../style/style-dash-produtos.css">
   <link rel="stylesheet" href="../style/style-hamburguer.css">
-  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   </head>
 
 <body>
@@ -50,15 +48,14 @@
           <div class="header-cell" role="columnheader">Ações</div>
         </div>
 
-        <div class="table-body" id="product-list" role="rowgroup">
+        <div class="products-grid" id="product-list" role="rowgroup">
           <!-- Product rows will be inserted here dynamically -->
         </div>
       </div>
     </section>
   </main>
 
-  <script type="module" src="../js/admin/firebase-config.js"></script>
-  <script type="module" src="../js/admin/product-details.js"></script>
+  <script type="module" src="../js/admin/view-products.js"></script>
   <script src="../js/menu.js"></script>
 </body>
 </html>
