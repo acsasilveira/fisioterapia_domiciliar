@@ -3,21 +3,23 @@ rules_version='2'
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // Regras para Produtos e Depoimentos (Site Institucional)
-    // Utilizamos uma função para evitar repetição de código (DRY - Don't Repeat Yourself)
-    
+    // Função para verificar se o usuário está logado
     function isAutenticado() {
       return request.auth != null;
     }
 
-    match /products/{produto} {
+    match /products/{id} {
       allow read: if true; // Público
-      allow write: if isAutenticado(); // Somente seu usuário logado
+      allow create: if isAutenticado();
+      allow update: if isAutenticado();
+      allow delete: if isAutenticado();
     }
 
-    match /testimonials/{depoimento} {
-      allow read: if true; // Público
-      allow write: if isAutenticado(); // Somente seu usuário logado
+    match /testimonials/{id} {
+      allow read: if true;
+      allow create: if isAutenticado();
+      allow update: if isAutenticado();
+      allow delete: if isAutenticado();
     }
   }
 }
